@@ -16,14 +16,15 @@ function mudarCor(event) {
     document.getElementsByTagName('li')[index].style.backgroundColor = '#fff';
   }
   event.target.style.backgroundColor = 'rgb(128, 128, 128)';
+  event.target.classList.add('selecionado');
 }
 lista.addEventListener('click', mudarCor);
 
- function tarefaCompleta(event) {
-  if (event.target.className === 'completed') {
+function tarefaCompleta(event) {
+  if (event.target.className.includes('completed')) {
     event.target.classList.remove('completed');
   } else {
-  event.target.className = 'completed';
+  event.target.classList.add('completed');
   }
 }
 lista.addEventListener('dblclick', tarefaCompleta);
@@ -53,6 +54,12 @@ function listaSalva() {
   lista.innerHTML = localStorage.getItem('listagem');
 }
 listaSalva();
+
+function removerSelecionado() {
+ document.getElementsByClassName('selecionado')[0].remove();
+}
+const botaoRemoverSelcionado = document.querySelector('#remover-selecionado');
+botaoRemoverSelcionado.addEventListener('click', removerSelecionado);
 
 // Referencias
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event
