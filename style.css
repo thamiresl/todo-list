@@ -3,3 +3,10 @@
   padding: 0;
 }
 
+.itemSelecionado {
+  background-color: rgb(128, 128, 128);
+}
+
+.feito {
+  text-decoration: line-through;
+}
