@@ -15,25 +15,25 @@ function mudarCor(event) {
   for (let index = 0; index < itemLista.length; index += 1) {
     document.getElementsByTagName('LI')[index].style.backgroundColor = '#fff';
   }
-  event.target.style.backgroundColor = '#808080';
+  event.target.style.backgroundColor = 'rgb(128, 128, 128)';
 }
 lista.addEventListener('click', mudarCor);
 
-//
-
-function tarefaCompleta(event) {
-  event.target.classList.add('completed');
-  event.target.style.textDecoration = 'line-through solid rgb(0, 0, 0)';
+ function tarefaCompleta(event) {
+  if (event.target.className === 'completed'){
+    event.target.classList.remove('completed');
+  } else {
+  event.target.className = 'completed';
+  }
 }
-lista.addEventListener('dblClick', tarefaCompleta);
+lista.addEventListener('dblclick', tarefaCompleta); 
 
-//
 function removerTudo() {
   lista.innerHTML = '';
 }
 const botaoRemoverTudo = document.querySelector('#apaga-tudo');
 botaoRemoverTudo.addEventListener('click', removerTudo);
-//
+
 function removerConcluidos() {
   const concluidos = document.querySelectorAll('.completed');
   for (let index = 0; index < concluidos.length; index += 1) {
@@ -41,7 +41,7 @@ function removerConcluidos() {
   }
 }
 const botaoRemoverConcluidos = document.querySelector('#remover-finalizados');
-botaoRemoverConcluidos.addEventListener('click', removerTudo);
+botaoRemoverConcluidos.addEventListener('click', removerConcluidos);
 // Referencias
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event
 // https://stackoverflow.com/questions/21976227/classlist-add-does-not-work
