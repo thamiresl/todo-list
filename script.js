@@ -24,7 +24,7 @@ function tarefaCompleta(event) {
   if (event.target.className.includes('completed')) {
     event.target.classList.remove('completed');
   } else {
-  event.target.classList.add('completed');
+    event.target.classList.add('completed');
   }
 }
 lista.addEventListener('dblclick', tarefaCompleta);
@@ -56,7 +56,7 @@ function listaSalva() {
 listaSalva();
 
 function removerSelecionado() {
- document.getElementsByClassName('selecionado')[0].remove();
+  document.getElementsByClassName('selecionado')[0].remove();
 }
 const botaoRemoverSelcionado = document.querySelector('#remover-selecionado');
 botaoRemoverSelcionado.addEventListener('click', removerSelecionado);

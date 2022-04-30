@@ -1,12 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lato:ital,wght@1,300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
 .itemSelecionado {
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(128 , 128 , 128);
 }
 
 .completed {
-  text-decoration: line-through solid rgb(0, 0, 0);
+  text-decoration: line-through solid rgb(0 , 0 , 0);
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+#title {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 42px;
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.body-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+}
+
+#criar-tarefa {
+  font-family: 'Lato', sans-serif;
+  background-color: hsl(27, 60%, 67%);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3px 6px;
+}
+
+#apaga-tudo {
+  font-family: 'Lato', sans-serif;
+  background-color: hsl(27, 60%, 67%);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3px 6px;
+}
+
+#remover-selecionado {
+  font-family: 'Lato', sans-serif;
+  background-color: hsl(27, 60%, 67%);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3px 6px;
+}
+
+#remover-finalizados {
+  font-family: 'Lato', sans-serif;
+  background-color: hsl(27, 60%, 67%);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3px 6px;
+}
+
+#salvar-tarefas {
+  font-family: 'Lato', sans-serif;
+  background-color: hsl(27, 60%, 67%);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3px 6px;
+}
+
+#texto-tarefa {
+  width: 572px;
+  border: solid 1px hsl(27, 60%, 67%);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px;
+  height: 30px;
 }
